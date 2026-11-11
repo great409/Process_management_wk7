@@ -1,0 +1,4 @@
+
+#!/bin/bash
+export MSYS_NO_PATHCONV=1
+tasklist /FI "IMAGENAME eq $1.exe" 2>/dev/null | awk 'NR>3 {print $2}' | head -n 1
